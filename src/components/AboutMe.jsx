@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaGlobe, FaBlog, FaTelegram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import profilePicture from '../assets/my-photo.png';
 
 const websites = [
     {
@@ -22,22 +23,29 @@ const websites = [
     }
 ];
 
-const Blog = () => {
+const AboutMe = () => {
     return (
-        <section id="blog" className="py-16 bg-black flex items-center justify-center">
-            <div className="container mx-auto px-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-                <div className='flex-1 bg-gray-800 rounded-lg shadow-2xl p-8 transition-transform transform'>
-                    <h2 className="text-4xl font-bold text-center mb-4 text-indigo-400">About Me</h2>
-                    <p className="text-lg mb-6 text-gray-300">
-                        Hi! I’m Jasur, a dedicated Frontend Developer with a passion for creating engaging web experiences. My expertise lies in HTML, CSS, and JavaScript, focusing on frameworks like React and Tailwind CSS.
-                    </p>
-                    <p className="text-lg text-gray-300">
-                        When I’m not coding, I enjoy contributing to open-source projects and advocating for web accessibility. Thank you for visiting my portfolio—let’s connect and create something amazing together!
-                    </p>
+        <section id="about-me" className="py-16 bg-black text-white">
+            <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
+                {/* About Me Section */}
+                <div className="relative mb-12 md:mb-0 md:w-1/3 overflow-hidden">
+                    <img
+                        src={profilePicture}
+                        alt="Jasur"
+                        className="w-full h-full object-cover transition-transform transform rounded-full"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-30"></div>
                 </div>
-                <div className='flex-1 bg-gray-800 rounded-lg shadow-2xl p-8 transition-transform transform'>
-                    <h2 className="text-4xl font-bold text-center mb-6 text-indigo-400">My Links</h2>
-                    <div className="grid grid-cols-1 gap-6">
+
+                <div className="md:w-2/3 text-center md:text-left md:pl-8">
+                    <h2 className="text-5xl font-bold text-indigo-400 mb-4">About Me</h2>
+                    <p className="text-gray-300 text-lg mb-6 max-w-full">
+                        Hi! I’m Jasur, a dedicated Frontend Developer creating engaging web experiences. My expertise lies in React and Tailwind CSS. I am passionate about building responsive and user-friendly interfaces that enhance user interactions. I continually explore new technologies and best practices to refine my skills. In addition to coding, I enjoy collaborating with designers and developers to bring creative ideas to life. Outside of work, I love sharing my knowledge through blogs and engaging in community discussions about the latest trends in web development.
+                    </p>
+
+                    {/* Links Section */}
+                    <h2 className="text-4xl font-bold text-center md:text-left mb-6 text-indigo-400">My Links</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {websites.map((site, index) => (
                             <div key={index} className="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
                                 <div className="p-4 flex items-center">
@@ -60,4 +68,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default AboutMe;

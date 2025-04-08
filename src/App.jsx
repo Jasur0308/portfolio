@@ -1,9 +1,10 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/hero/Hero';
 import Projects from './components/Projects';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
+import Skills from './components/Skills';
+import AboutMe from './components/AboutMe';
+import Achievements from './components/Testimonials';
 
 const App = () => {
   return (
@@ -11,8 +12,10 @@ const App = () => {
       <Navbar />
       <div className="container mx-auto">
         <Hero/>
+        <AboutMe/>
+        <Skills/>
         <Projects/>
-        <Blog/>
+        <Achievements/>
         <Contact/>
       </div>
     </div>

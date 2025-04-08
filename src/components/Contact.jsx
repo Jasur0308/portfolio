@@ -3,7 +3,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa'
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-16 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <section id="contact" className="py-16 bg-gray-900 text-white">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-bold text-center mb-10 text-indigo-400">Contact Me</h2>
                 <div className="flex flex-col items-center">
@@ -23,8 +23,11 @@ const Contact = () => {
                             <h3 className="text-lg font-semibold flex items-center">
                                 <FaPhone className="mr-2 text-indigo-400" /> Phone
                             </h3>
-                            <p className="text-indigo-400">+998 91 576 20 03</p>
+                            <p className="text-indigo-400">
+                                <a href="tel:+998915762003" className="hover:underline">+998 91 576 20 03</a>
+                            </p>
                         </div>
+
                         <div className="bg-gray-800 rounded-lg p-6 shadow-lg transform transition-transform hover:scale-105">
                             <h3 className="text-lg font-semibold flex items-center">
                                 <FaMapMarkerAlt className="mr-2 text-indigo-400" /> Location
